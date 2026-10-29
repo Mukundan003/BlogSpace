@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | BlogSpace</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+
+  <aside class="dashboard-sidebar">
+    <a href="index.html" class="logo">Blog<span>Space.</span></a>
+
+    <p class="sidebar-label">WORKSPACE</p>
+
+    <nav class="sidebar-nav">
+      <a href="dashboard.html" class="sidebar-link active">
+        <span>▦</span> Dashboard
+      </a>
+      <a href="#myPosts" class="sidebar-link">
+        <span>▤</span> My Blogs
+      </a>
+      <a href="create-blog.html" class="sidebar-link">
+        <span>＋</span> Create Blog
+      </a>
+      <a href="index.html" class="sidebar-link">
+        <span>⌂</span> Visit Website
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-user">
+        <div class="user-avatar" id="sidebarAvatar">U</div>
+        <div class="sidebar-user-info">
+          <strong id="sidebarUserName">User</strong>
+          <span>BlogSpace Member</span>
+        </div>
+      </div>
+
+      <button type="button" id="logoutButton"
+        class="sidebar-link logout-button">
+        <span>↪</span> Log Out
+      </button>
+    </div>
+  </aside>
+
+  <main class="dashboard-main">
+
+    <header class="dashboard-header">
+      <div>
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h1>Dashboard</h1>
+        <p class="dashboard-subtitle">
+          Manage your stories and track your progress.
+        </p>
+      </div>
+
+      <a href="create-blog.html" class="btn btn-primary">
+        + Create New Blog
+      </a>
+    </header>
+
+    <section class="welcome-banner">
+      <div>
+        <p class="welcome-label">YOUR CREATIVE SPACE</p>
+        <h2>Welcome back, <span id="welcomeName">Writer</span>!</h2>
+        <p>Your next great story is just a few words away.</p>
+      </div>
+      <div class="welcome-decoration" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="stats-grid" aria-label="Blog statistics">
+
+      <article class="stat-card">
+        <div class="stat-icon purple-icon">▤</div>
+        <p>Total Posts</p>
+        <h2 id="totalPosts">0</h2>
+        <span>All your blog entries</span>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon green-icon">✓</div>
+        <p>Published</p>
+        <h2 id="publishedPosts">0</h2>
+        <span>Posts live in your workspace</span>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon orange-icon">✎</div>
+        <p>Drafts</p>
+        <h2 id="draftPosts">0</h2>
+        <span>Posts still in progress</span>
+      </article>
+
+    </section>
+
+    <section class="posts-panel" id="myPosts">
+      <div class="posts-panel-header">
+        <div>
+          <h2>My Blog Posts</h2>
+          <p>Manage and organize your stories.</p>
+        </div>
+
+        <a href="create-blog.html" class="text-link">
+          + New post
+        </a>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="posts-table">
+          <thead>
+            <tr>
+              <th>Blog title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="postsTableBody">
+            <tr>
+              <td colspan="4" class="empty-state">
+                Loading your posts...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="dashboardMessage" class="form-message"
+        role="status" aria-live="polite"></p>
+    </section>
+
+    <footer class="dashboard-footer">
+      <p>© 2026 BlogSpace · Make every story count.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

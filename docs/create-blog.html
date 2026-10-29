@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Blog | BlogSpace</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="create-blog-page">
+
+  <header class="navbar editor-navbar">
+    <a href="index.html" class="logo">Blog<span>Space.</span></a>
+
+    <nav class="editor-nav">
+      <a href="dashboard.html" class="back-link">← Dashboard</a>
+      <span class="editor-user" id="editorUserName">Writer</span>
+    </nav>
+  </header>
+
+  <main class="editor-main">
+
+    <div class="editor-heading">
+      <div>
+        <p class="eyebrow">YOUR CREATIVE WORKSPACE</p>
+        <h1 id="editorHeading">Create a new blog</h1>
+        <p class="editor-subtitle">
+          Turn your ideas into stories worth sharing.
+        </p>
+      </div>
+
+      <span class="editor-draft-indicator" id="editorStatus">
+        New post
+      </span>
+    </div>
+
+    <form id="blogForm" class="blog-editor-form">
+
+      <div class="editor-fields">
+
+        <div class="form-group">
+          <label for="blogTitle">Blog title *</label>
+          <input
+            type="text"
+            id="blogTitle"
+            name="title"
+            placeholder="Give your story a great title..."
+            minlength="3"
+            maxlength="120"
+            required
+          >
+          <p class="field-hint">3–120 characters.</p>
+        </div>
+
+        <div class="editor-two-columns">
+
+          <div class="form-group">
+            <label for="blogCategory">Category *</label>
+            <select id="blogCategory" name="category" required>
+              <option value="">Choose a category</option>
+              <option value="Technology">Technology</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Programming">Programming</option>
+              <option value="Productivity">Productivity</option>
+              <option value="Education">Education</option>
+              <option value="Lifestyle">Lifestyle</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="blogCover">Cover image URL (optional)</label>
+            <input
+              type="url"
+              id="blogCover"
+              name="cover"
+              placeholder="https://example.com/image.jpg"
+              maxlength="2048"
+            >
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="blogContent">Your story *</label>
+          <textarea
+            id="blogContent"
+            name="content"
+            rows="14"
+            minlength="20"
+            maxlength="20000"
+            placeholder="Start writing your story here..."
+            required
+          ></textarea>
+          <div class="editor-field-footer">
+            <p class="field-hint">At least 20 characters. Maximum 20,000.</p>
+            <p class="character-count">
+              <span id="characterCount">0</span> / 20000
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="editor-actions">
+        <a href="dashboard.html" class="btn btn-outline">
+          Cancel
+        </a>
+
+        <div class="editor-action-group">
+          <button
+            type="button"
+            id="saveDraftButton"
+            class="btn btn-outline"
+          >
+            Save Draft
+          </button>
+
+          <button
+            type="submit"
+            id="publishButton"
+            class="btn btn-primary"
+          >
+            Publish Blog →
+          </button>
+        </div>
+      </div>
+
+      <p id="blogMessage" class="form-message"
+        role="status" aria-live="polite"></p>
+
+    </form>
+
+    <footer class="editor-footer">
+      <p>© 2026 BlogSpace · Every great story starts somewhere.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

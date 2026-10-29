@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlogSpace | Discover Stories</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">Blog<span>Space.</span></a>
+
+    
+<nav class="nav-links">
+  <a href="index.html" class="active">Home</a>
+  <a href="#latest">Explore</a>
+  <a href="login.html">Login</a>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<a href="register.html" class="btn btn-primary">Get Started</a>
+
+    <a href="register.html" class="btn btn-primary">Get Started</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR SPACE. YOUR STORIES.</p>
+      <h1>Ideas worth sharing.<br>
+        <span>Stories worth reading.</span>
+      </h1>
+      <p class="hero-text">
+        Discover fresh perspectives, share your knowledge,
+        and connect with a community of curious minds.
+      </p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary">
+          Start Writing →
+        </a>
+        <a href="#latest" class="btn btn-outline">
+          Explore Blogs
+        </a>
+      </div>
+    </section>
+
+
+<section id="latest" class="latest-section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">THE BLOGSPACE COMMUNITY</p>
+      <h2>Latest stories</h2>
+      <p class="home-section-subtitle">
+        Fresh ideas and perspectives from our writers.
+      </p>
+    </div>
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Search stories..."
+      aria-label="Search published stories"
+    >
+  </div>
+
+  <div class="blog-filter-row">
+    <label for="categoryFilter">Category</label>
+    <select id="categoryFilter">
+      <option value="all">All categories</option>
+      <option value="Technology">Technology</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Programming">Programming</option>
+      <option value="Productivity">Productivity</option>
+      <option value="Education">Education</option>
+      <option value="Lifestyle">Lifestyle</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div id="blogList" class="blog-grid" aria-live="polite">
+    <p>Loading published stories...</p>
+  </div>
+
+  <p id="homeMessage" class="form-message" role="status"></p>
+</section>
+
+<!-- Article preview dialog -->
+<dialog id="articleDialog" class="article-dialog">
+  <div class="article-dialog-header">
+    <span class="eyebrow">BLOGSPACE STORY</span>
+    <button
+      type="button"
+      id="closeArticle"
+      class="article-close"
+      aria-label="Close article"
+    >✕</button>
+  </div>
+
+  <div id="articlePreviewContent"></div>
+</dialog>
+</body>
+</html>
